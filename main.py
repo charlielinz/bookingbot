@@ -69,7 +69,7 @@ for order in orders:
     # first order page
     if kids == "0":
         print("You enter wrong kids number.")
-    elif (kids != 0) & (kids in available_kids):
+    elif (kids != 0) and (kids in available_kids):
         driver.find_element(By.XPATH, f"//select[@id='kid-picker']/option[@value='{kids}']").click()
         print(f"there are seats for {kids} kids")
     else:
